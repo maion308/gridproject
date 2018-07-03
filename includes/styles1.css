@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+}
+
+main {
+	max-width: 500px;
+}
+
+@supports (display: grid) {
+	main {
+		max-width: none;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-gap: 1rem;
+	}
+} 
+
+article {
+	display: flex;
+	flex-flow: column;
+	margin: 0 0 1rem;
+}
+
+article > h1 {
+	display: grid;
+	grid-gap: 1rem;
+	margin: 1rem;
+}
+
+article > p {
+	display: grid;
+}
+
+article > ul {
+	display: grid;
+	margin: 1rem;
+}
+
+article > button {
+	display: grid;
+	margin: 1rem;
+}
+
+article > img {
+  order: -1;
+  align-self: center; }

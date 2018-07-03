@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+main {
+	max-width: 500px;
+	font-family: Avenir, Roboto, Helvetica, san-serif;
+  	font-size: 80%; 
+}
+
+@supports (display: grid) {
+	main {
+		max-width: none;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-gap: 1rem;
+	}
+}
+
+article {
+	display: flex;
+	flex-flow: column;
+	border: 1px solid black;
+	border-radius: 1rem;
+	padding: 2rem;
+}
+
+article > h1 {
+	margin: 1rem;
+}
+
+article > p {
+	margin: .25em 1rem 1rem;
+}
+
+
+article > ul {
+	margin: 0 0 1rem;
+}
+
+article > img {
+	order: -1;
+	align-self: center;
+	width: 280px;
+	height: 400px;
+}
+
+article > button {
+	background-color: coral;
+	color: white;
+	border: none;
+	border-radius: 1rem;
+	padding: .5rem;
+	margin-top: auto;
+	font-size: 1.2rem;
+	outline: none;
+}
+
+footer {
+	text-align: center;
+}
